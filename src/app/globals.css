@@ -24,3 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* --- Infinite Scroll Animation (Added Manually) --- */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* 50% move karega taaki loop seamless ho */
+  }
+}
+
+.animate-scroll-custom {
+  display: flex;
+  width: max-content; /* Zaroori hai taaki items wrap na ho */
+  animation: scroll 30s linear infinite; /* 30s speed */
+}
+
+.animate-scroll-custom:hover {
+  animation-play-state: paused; /* Mouse le jaane par ruk jayega */
+}

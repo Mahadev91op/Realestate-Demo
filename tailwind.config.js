@@ -11,14 +11,18 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      // Ye humne add kiya hai zoom animation ke liye
       animation: {
         'slow-zoom': 'zoom 20s infinite alternate',
+        'scroll': 'scroll 40s linear infinite', // <--- Ye zaroori hai
       },
       keyframes: {
         zoom: {
           '0%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(1.1)' },
+        },
+        scroll: { // <--- Infinite Scroll Logic
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }, // 2 sets ke liye -50% perfect hai
         },
       },
     },
